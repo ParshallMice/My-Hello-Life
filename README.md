@@ -1,6 +1,7 @@
 # MyHelloLife
 
 -- Description of the App --
+
 This is a website intended to be set as the home on what the
 users browser, so that when the user opens a new tab or a
 new window, or the click the home button on their browser,
