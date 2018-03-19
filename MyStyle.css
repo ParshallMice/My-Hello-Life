@@ -1,0 +1,108 @@
+@font-face {
+   font-family: myFirstFont;
+   src: url(iApple.ttf);
+}
+
+body {
+    background: url("img/mobbg.jpg");
+    background-size: 100% 100%;
+}
+
+.infL { color: #2196F3; }
+h4 { text-align: center; }
+
+#BG12 {
+    background: url("iCloudBG.png");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.iEis {
+   background-color: white;
+}
+.iAis, .iEis {
+   width: 72px;
+   height:72px;
+   border-radius: 12.632px;
+}
+
+.icPa { position: absolute; }
+
+.F { position: absolute; top: 20%; }
+.A { position: absolute; top: 38%; }
+.B { position: absolute; top: 56%; }
+.C { position: absolute; top: 74%; }
+
+.p1 { position: absolute; left: 15%; }
+.p2 { position: absolute; left: 30%; }
+.p3 { position: absolute; left: 45%; }
+.p4 { position: absolute; left: 60%; }
+.p5 { position: absolute; left: 75%; }
+
+#appleClose {
+   border-radius: 25px;
+   position:absolute;
+   top:0.75%;
+   left:49%;
+   width: 35px;
+   height: 35px;
+   color: white;
+   text-align:center;
+   font-size: 21px;
+}
+header.w3-container {
+   background: -webkit-linear-gradient(bottom, rgb(147, 146, 147) 0%, rgb(211, 207, 210) 3%, rgb(245, 244, 245) 99%);
+   background: -o-linear-gradient(bottom, rgb(147, 146, 147) 0%, rgb(211, 207, 210) 3%, rgb(245, 244, 245) 99%);
+   background: -ms-linear-gradient(bottom, rgb(147, 146, 147) 0%, rgb(211, 207, 210) 3%, rgb(245, 244, 245) 99%);
+   background: -moz-linear-gradient(bottom, rgb(147, 146, 147) 0%, rgb(211, 207, 210) 3%, rgb(245, 244, 245) 99%);
+   background: linear-gradient(to top, rgb(147, 146, 147) 0%, rgb(211, 207, 210) 3%, rgb(245, 244, 245) 99%);
+   
+   color: black;
+}
+
+.titletxt {
+   font-family: myFirstFont;
+   color: white;
+   text-align: center;
+   text-decoration: none;
+}
+
+a { text-decoration: none; }
+
+p#m {
+    font-family: myFirstFont;
+    font-size: 20px;
+    line-height: 2.5em;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+a.Headera {
+    font-size: 20px;
+    font-family: myFirstFont;
+    color: #E6E6E6;
+    text-decoration: none;
+}
+#timedis {
+   font-size: 17px;
+}
+
+img#logo {
+    border-radius: 25px 25px 25px 25px;
+}
+
+#book {
+    width: 75px;
+    height: 75px;
+}
+
+#U {
+    width: 11%;
+    height: 11%;
+}
+
+div#t {
+   font-family: myFirstFont;
+}

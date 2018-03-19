@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+ <meta charset="UTF-8"> 
+<html>
+<head>
+<title>
+Hello Life
+</title>
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/ico/img/ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/ico/favicon-16x16.png">
+<link rel="manifest" href="/img/ico/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/ico/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" type="text/css" href="MyStyle.css">
+<link rel="stylesheet" type="text/css" href="additions.css">
+<link rel="stylesheet" type="text/css" href="index.css">
+<script type="text/javascript" src="WebsiteArray.js"></script>
+
+<style></style>
+
+<script>
+function UseLoad1() {
+     changeMode("Edit");
+     changeMode("Use");
+}
+</script>
+<script>
+function WelcomeNewUser() {
+     if (!localStorage.UserName) {
+//        var userName = prompt("What is your name?", "Parshall");
+        var userName = "New User"
+        localStorage.setItem("UserName", userName);
+     }
+     document.getElementById("ShowUserName").innerHTML = localStorage.getItem("UserName");
+}
+
+// [ prvt alrt ]
+</script>
+<script>
+//pre load page
+function loadPage() {
+    setTimeout(showPage, 1);
+}
+
+function showPage() {
+  document.getElementById("page").style.display = "block";
+}
+</script>
+
+<script>
+function loadCountF() {
+     if (localStorage.loadcount) {
+        localStorage.loadcount = Number(localStorage.loadcount)+1;
+     } else {
+        localStorage.loadcount = 1;
+     }
+}
+
+function loadCounter() {
+        localStorage.clickcount = Number(localStorage.clickcount)+1;
+}
+</script>
+
+<script>
+// Get the modal
+var iconEditorModal = document.getElementById('iconEditor');
+
+// When the user clicks anywhere outside of the iconEditorModal, close it
+window.onclick = function(event) {
+    if (event.target == iconEditorModal) {
+        iconEditorModal.style.display = "none";
+    }
+}
+</script>
+
+</head>
+<body onload="showPage(); load21(); UseLoad1(); loadCountF(); WelcomeNewUser();" scrolling="no">
+
+<div style="display:none;" id="page" class="animate-bottom">
+
+<div align="Left" style="position: absolute; top: -1%; left: 1%;"><a class="Headera" style="text-shadow: 0px 0px 5px #2f2f2f"><p>Hello Life</p></a></div>
+<div align="center" style="position: absolute; top: -0.25%; left: 47%;"><a class="Headera" style="text-shadow: 0px 0px 5px #2f2f2f"><p id="timedis"></p></a></div>
+<div align="Right" style="position: absolute; top: -1%; right: 1%;"><a class="Headera" onclick="document.getElementById('nameReset').style.display = 'block'" style="text-shadow: 0px 0px 5px #2f2f2f"><p id="ShowUserName"><img src="img/Profile.png" style="width:30px; padding: 0px 5px 0px 0px; border-radius: 30px 30px 30px 30px;">Parshall Mice</p></a></div>
+
+<ul class="w3-navbar w3-black" style="position: absolute; bottom: 1%; left: 1%">
+  <li><a href="#" onclick="changeMode('Use')">Use</a></li>
+  <li><a href="#" onclick="changeMode('Edit')">Edit</a></li>
+</ul>
+<!--ul class="w3-navbar w3-black" style="position: absolute; bottom: 1%; right: 1%" onload="changeMode('Use')">
+  <li><a href="#" onclick="SaveLSF(); document.getElementById('SaveLS').style.display='block';">Save</a></li>
+  <!--li><a href="#" onclick="document.getElementById('LoadLS').style.display='block'; Alert('This is not yet functional', 'OK')">Load</a></li->
+</ul-->
+<script>
+function changeMode(mode) {
+    var i;
+    var x = document.getElementsByClassName("modes");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    document.getElementById(mode).style.display = "block";
+}
+var fbBut = '<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ffb.me%2Fmyhellolifehome&layout=button&size=large&mobile_iframe=true&width=73&height=28&appId" width="73" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>';
+var altToBut = '<a class="infL" href="https://alternativeto.net/software/my-hello-life/">Click Here</a>';
+var TutLink = '<a class="infL" href="Tutorial.html"> Click Here to open the Tutorial </a>';
+var facebookPage = '<a class="infL" href="http://fb.me/myhellolifehome"> Write a review on Facebook </a>';
+var altToPage = '<a class="infL" href="https://alternativeto.net/software/my-hello-life/reviews/"> Write a review on AlternativeTo.com</a>';
+var emailadd = '<a class="infL" href="mailto:parshall.mice@myhellolife.com?Subject=Feedback%20on%20Hello%20Life"> parshall.mice@myhellolife.com </a>';
+</script>
+
+<img alt="Icon made by Freepik from www.flaticon.com" src="img/infoi.png" style="position: absolute; bottom: 2%; left: 48.875%; width: 2.25%;" onclick="Alert('<h4>Share</h4>Share and Like this app on Facebook: '+fbBut+'<br>Also, you can like me on AltenativeTo.com: '+altToBut+'<br><h4>Tutorial</h4>I have made a tutorial page for this site. (<b>Note:</b> It is simple and no where near final product): '+TutLink+'<br><h4>Leave a Review</h4>If you would like to leave feedback, you can '+facebookPage+'<br>or you can '+altToPage+'.<br>Or if you want to directly email your feedback to me, my email address is '+emailadd+'', 'Done')">
+
+<!-- This is so that people can donate to me [adr] -->
+<div id="adRepellantdiv"><img src="/img/AdRepellant.png" style="position: absolute; top: 25%; right: 2%; width: 7%" alt="Ad Repellant - Help keep the ads away!" onclick="document.getElementById('ADR').style.display='block'"></div>
+
+<div id="ADR" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom w3-card-8">
+    <header class="w3-container w3-blue">
+      <span onclick="document.getElementById('ADR').style.display='none'"
+      class="w3-closebtn">&times;</span>
+      <h2>What is <b>Ad Repellant</b>?</h2>
+    </header>
+    <div class="w3-container">
+      <p style="text-align: left;">Hello User,<br> &nbsp &nbsp &nbsp Ad Repellant is a donation system on Hello Life that removes ads from the site.  In my opinion, the ads on Hello Life detract from the overall smooth, clean feel of the app.  And I don't want to do that to you the user but I, as a college student, need to make money somehow.  And I have been working on this app since 2013.  Up to this point (Feb, 2018), I have yet to make a dime off of all of the work that I put into this project (Hello Life).  So the Ad Repellant button below will help you to contribute to the ongoing development of this app.  <b>The MyHelloLife.com domain is going to cost us about $10 per year.  So donations are also nessecary for that.</b>  If you want the ads and the 'Ad Repellant' button to not display for you, you have to donate at least $5. <br>Thanks,<br>
+Parshall Mice<br><br>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=R942ZY8CMFEDJ"><img src="/img/AdRepellant.png" style="width: 200px;" alt="Ad Repellant - Help keep the ads away!"></a><br>
+<br>Or you can help out the page by clicking the following ad link: <a href="http://go.oclasrv.com/afu.php?zoneid=1559153">Click Here</a>.<br><strong>WARNING:</strong> The ad link above may be a scam.  If it leads you to download anything, delete that file!.</p>
+    </div>
+  <div class="w3-container w3-light-grey w3-padding" style="text-align: left;">
+   <button class="w3-btn w3-right w3-white w3-border"
+   onclick="document.getElementById('ADR').style.display='none'">No Thanks</button>
+  </div>
+  </div>
+</div>
+
+<div id="Edit" class="w3-container modes">
+<table>
+  <tr>
+    <td>
+<a class="iconEdit icPa F p1" onclick="document.getElementById('iconChangeButton').onclick = function() {F1script()}; document.getElementById('name').value = document.getElementById('A6a').title; document.getElementById('photo').value = document.getElementById('A6img').src; document.getElementById('link').value = document.getElementById('A6a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="A6imgic" src="img/PlaceHolder.png" class="iEis"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa F p2" onclick="document.getElementById('iconChangeButton').onclick = function() {F2script()}; document.getElementById('name').value = document.getElementById('A7a').title; document.getElementById('photo').value = document.getElementById('A7img').src; document.getElementById('link').value = document.getElementById('A7a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="A7imgic" src="img/PlaceHolder.png" class="iEis"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa F p3" onclick="document.getElementById('iconChangeButton').onclick = function() {F3script()}; document.getElementById('name').value = document.getElementById('B6a').title; document.getElementById('photo').value = document.getElementById('B6img').src; document.getElementById('link').value = document.getElementById('B6a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="B6imgic" src="img/Wikipedia.png" class="iEis"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa F p4" onclick="document.getElementById('iconChangeButton').onclick = function() {F4script()}; document.getElementById('name').value = document.getElementById('B7a').title; document.getElementById('photo').value = document.getElementById('B7img').src; document.getElementById('link').value = document.getElementById('B7a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="B7imgic" src="img/Bible.png" class="iEis"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa F p5" onclick="document.getElementById('iconChangeButton').onclick = function() {F5script()}; document.getElementById('name').value = document.getElementById('C6a').title; document.getElementById('photo').value = document.getElementById('C6img').src; document.getElementById('link').value = document.getElementById('C6a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="C6imgic" src="img/iCloudMail.png" class="iEis"></a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<a class="iconEdit icPa A p1" onclick="document.getElementById('iconChangeButton').onclick = function() {A1script()}; document.getElementById('name').value = document.getElementById('A1a').title; document.getElementById('photo').value = document.getElementById('A1img').src; document.getElementById('link').value = document.getElementById('A1a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="A1imgic" src="img/PlaceHolder.png" class="iEis"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa A p2" onclick="document.getElementById('iconChangeButton').onclick = function() {A2script()}; document.getElementById('name').value = document.getElementById('A2a').title; document.getElementById('photo').value = document.getElementById('A2img').src; document.getElementById('link').value = document.getElementById('A2a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="A2imgic" src="img/PlaceHolder.png" class="iEis"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa A p3" onclick="document.getElementById('iconChangeButton').onclick = function() {A3script()}; document.getElementById('name').value = document.getElementById('A3a').title; document.getElementById('photo').value = document.getElementById('A3img').src; document.getElementById('link').value = document.getElementById('A3a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="A3imgic" src="img/PlaceHolder.png" class="iEis"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa A p4" onclick="document.getElementById('iconChangeButton').onclick = function() {A4script()}; document.getElementById('name').value = document.getElementById('A4a').title; document.getElementById('photo').value = document.getElementById('A4img').src; document.getElementById('link').value = document.getElementById('A4a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="A4imgic" src="img/PlaceHolder.png" class="iEis"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa A p5" onclick="document.getElementById('iconChangeButton').onclick = function() {A5script()}; document.getElementById('name').value = document.getElementById('A5a').title; document.getElementById('photo').value = document.getElementById('A5img').src; document.getElementById('link').value = document.getElementById('A5a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="A5imgic" src="img/PlaceHolder.png" class="iEis"></a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<a class="iconEdit icPa B p1" onclick="document.getElementById('iconChangeButton').onclick = function() {B1script()}; document.getElementById('name').value = document.getElementById('B1a').title; document.getElementById('photo').value = document.getElementById('B1img').src; document.getElementById('link').value = document.getElementById('B1a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="B1imgic" src="img/Translate.png" class="iEis" background-color: white;"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa B p2" onclick="document.getElementById('iconChangeButton').onclick = function() {B2script()}; document.getElementById('name').value = document.getElementById('B2a').title; document.getElementById('photo').value = document.getElementById('B2img').src; document.getElementById('link').value = document.getElementById('B2a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="B2imgic" class="iEis" src="img/g.png"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa B p3" onclick="document.getElementById('iconChangeButton').onclick = function() {B3script()}; document.getElementById('name').value = document.getElementById('B3a').title; document.getElementById('photo').value = document.getElementById('B3img').src; document.getElementById('link').value = document.getElementById('B3a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="B3imgic" src="img/PlaceHolder.png" class="iEis"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa B p4" onclick="document.getElementById('iconChangeButton').onclick = function() {B4script()}; document.getElementById('name').value = document.getElementById('B4a').title; document.getElementById('photo').value = document.getElementById('B4img').src; document.getElementById('link').value = document.getElementById('B4a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="B4imgic" class="iEis" src="img/desmos.png"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa B p5" onclick="document.getElementById('iconChangeButton').onclick = function() {B5script()}; document.getElementById('name').value = document.getElementById('B5a').title; document.getElementById('photo').value = document.getElementById('B5img').src; document.getElementById('link').value = document.getElementById('B5a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="B5imgic" src="img/Wikipedia.png" class="iEis"></a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<a class="iconEdit icPa C p1" onclick="document.getElementById('iconChangeButton').onclick = function() {C1script()}; document.getElementById('name').value = document.getElementById('C1a').title; document.getElementById('photo').value = document.getElementById('C1img').src; document.getElementById('link').value = document.getElementById('C1a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="C1imgic" src="img/Mojang.png" class="iEis" id="logo"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa C p2" onclick="document.getElementById('iconChangeButton').onclick = function() {C2script()}; document.getElementById('name').value = document.getElementById('C2a').title; document.getElementById('photo').value = document.getElementById('C2img').src; document.getElementById('link').value = document.getElementById('C2a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="C2imgic" src="img/YouTube.png" class="iEis"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa C p3" onclick="document.getElementById('iconChangeButton').onclick = function() {C3script()}; document.getElementById('name').value = document.getElementById('C3a').title; document.getElementById('photo').value = document.getElementById('C3img').src; document.getElementById('link').value = document.getElementById('C3a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="C3imgic" src="img/Apps.png" class="iEis"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa C p4" onclick="document.getElementById('iconChangeButton').onclick = function() {C4script()}; document.getElementById('name').value = document.getElementById('C4a').title; document.getElementById('photo').value = document.getElementById('C4img').src; document.getElementById('link').value = document.getElementById('C4a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="C4imgic" src="img/Blogger.png" class="iEis" id="logo"></a>
+    </td>
+    <td>
+<a class="iconEdit icPa C p5" onclick="document.getElementById('iconChangeButton').onclick = function() {C5script()}; document.getElementById('name').value = document.getElementById('C5a').title; document.getElementById('photo').value = document.getElementById('C5img').src; document.getElementById('link').value = document.getElementById('C5a').href; document.getElementById('iconEditor').style.display='block'" data-toggle="tooltip" data-placement="bottom"><img id="C5imgic" src="img/PlaceHolder.png" class="iEis">
+    </td>
+  </tr>
+</table>
+</div>
+
+<div id="Use" class="w3-container modes">
+<table>
+  <tr>
+    <td>
+<a id="A6a" class="icon icPa F p1" href="/" data-toggle="tooltip" data-placement="bottom"><img id="A6img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rF">  </p></a>
+    </td>
+    <td>
+<a id="A7a" class="icon icPa F p2" href="/" data-toggle="tooltip" data-placement="bottom"><img id="A7img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rF">  </p></a>
+    </td>
+    <td>
+<a id="B6a" class="icon icPa F p3" href="/" data-toggle="tooltip" data-placement="bottom"><img id="B6img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rF">  </p></a>
+    </td>
+    <td>
+<a id="B7a" class="icon icPa F p4" href="/" data-toggle="tooltip" data-placement="bottom"><img id="B7img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rF">  </p></a>
+    </td>
+    <td>
+<a id="C6a" class="icon icPa F p5" href="/" data-toggle="tooltip" data-placement="bottom"><img id="C6img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rF">  </p></a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<a id="A1a" class="icon icPa A p1" href="/" data-toggle="tooltip" data-placement="bottom"><img id="A1img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rA">  </p></a>
+    </td>
+    <td>
+<a id="A2a" class="icon icPa A p2" href="/" data-toggle="tooltip" data-placement="bottom"><img id="A2img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rA">  </p></a>
+    </td>
+    <td>
+<a id="A3a" class="icon icPa A p3" href="/" data-toggle="tooltip" data-placement="bottom"><img id="A3img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rA">  </p></a>
+    </td>
+    <td>
+<a id="A4a" class="icon icPa A p4" href="/" data-toggle="tooltip" data-placement="bottom"><img id="A4img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rA">  </p></a>
+    </td>
+    <td>
+<a id="A5a" class="icon icPa A p5" href="/" data-toggle="tooltip" data-placement="bottom"><img id="A5img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rA">  </p></a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<a id="B1a" class="icon icPa B p1" href="/" data-toggle="tooltip" data-placement="bottom"><img id="B1img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rB">  </p></a>
+    </td>
+    <td>
+<a id="B2a" class="icon icPa B p2" href="/" data-toggle="tooltip" data-placement="bottom"><img id="B2img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rB">  </p></a>
+    </td>
+    <td>
+<a id="B3a" class="icon icPa B p3" href="/" data-toggle="tooltip" data-placement="bottom"><img id="B3img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rB">  </p></a>
+    </td>
+    <td>
+<a id="B4a" class="icon icPa B p4" href="/" data-toggle="tooltip" data-placement="bottom"><img id="B4img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rB">  </p></a>
+    </td>
+    <td>
+<a id="B5a" class="icon icPa B p5" href="/" data-toggle="tooltip" data-placement="bottom"><img id="B5img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rB">  </p></a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<a id="C1a" class="icon icPa C p1" href="/" data-toggle="tooltip" data-placement="bottom"><img id="C1img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rC">  </p></a>
+    </td>
+    <td>
+<a id="C2a" class="icon icPa C p2" href="/" data-toggle="tooltip" data-placement="bottom"><img id="C2img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rC">  </p></a>
+    </td>
+    <td>
+<a id="C3a" class="icon icPa C p3" href="/" data-toggle="tooltip" data-placement="bottom"><img id="C3img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rC">  </p></a>
+    </td>
+    <td>
+<a id="C4a" class="icon icPa C p4" href="/" data-toggle="tooltip" data-placement="bottom"><img id="C4img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rC">  </p></a>
+    </td>
+    <td>
+<a id="C5a" class="icon icPa C p5" href="/" data-toggle="tooltip" data-placement="bottom"><img id="C5img" src="img/PlaceHolder.png" class="iAis"><p class="titletxt rC">  </p><a/>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div id="iconEditor" class="w3-modal" style="opacity: 0.9;">
+  <div class="w3-modal-content w3-card-8">
+    <header class="w3-container">
+      <span onclick="document.getElementById('iconEditor').style.display='none'" class="w3-red w3-padding-1 doneEditing" id="appleClose">&times;</span>
+      <h2>Icon Editor</h2>
+    </header>
+    <div class="w3-container">
+<p>
+<label>App Name Preset Search</label>
+<input class="w3-input" type="text" id="psname" value="" width="85%" autocomplete="off"><button onclick="TestNameText();" class="w3-green w3-section w3-padding" width="10%" id="sdb">Search</button></p>
+
+<p>
+<label>App Name</label>
+<input class="w3-input" type="text" id="name" value=""></p>
+
+<p>
+<label>Photo URL</label>
+<input class="w3-input" type="text" id="photo" value="img/PlaceHolder.png"></p>
+
+<p>
+<label>Link</label>
+<input class="w3-input" type="text" id="link" value=""></p>
+
+<p>
+<!--label>Single Key Keyboard Shortcut</label>
+<button onclick="ShortcutReader()">Click Here to input a single key shortcut</button-->
+<input class="w3-input" type="text" id="key" style="opacity:0.0" value=""></p>
+
+<button class="w3-btn-block w3-green w3-section w3-padding doneEditing" id="iconChangeButton" onclick="alert('Icon change not working.\n\nError Code: 001\n\nparshallmice@myhellolife.com')" ondblclick="document.getElementById('iconEditor').style.display='none'">Change</button>
+
+    </div>
+    <footer class="w3-container" style="background: -webkit-linear-gradient(bottom, rgb(147, 146, 147) 0%, rgb(211, 207, 210) 3%, rgb(245, 244, 245) 99%); background: -o-linear-gradient(bottom, rgb(147, 146, 147) 0%, rgb(211, 207, 210) 3%, rgb(245, 244, 245) 99%); background: -ms-linear-gradient(bottom, rgb(147, 146, 147) 0%, rgb(211, 207, 210) 3%, rgb(245, 244, 245) 99%); background: -moz-linear-gradient(bottom, rgb(147, 146, 147) 0%, rgb(211, 207, 210) 3%, rgb(245, 244, 245) 99%); background: linear-gradient(to top, rgb(147, 146, 147) 0%, rgb(211, 207, 210) 3%, rgb(245, 244, 245) 99%);">
+      <p></p>
+    </footer>
+  </div>
+</div>
+
+<script>
+function load21() {
+     F1load();
+     F2load();
+     F3load();
+     F4load();
+     F5load();
+     A1load();
+     A2load();
+     A3load();
+     A4load();
+     A5load();
+     B1load();
+     B2load();
+     B3load();
+     B4load();
+     B5load();
+     C1load();
+     C2load();
+     C3load();
+     C4load();
+     C5load();
+}
+function F1script() {
+     var A6name = document.getElementById("name").value
+     var A6photo = document.getElementById("photo").value
+     var A6link = document.getElementById("link").value
+     localStorage.setItem("A6name", A6name);
+     localStorage.setItem("A6photo", A6photo);
+     localStorage.setItem("A6link", A6link);
+     F1load();
+}
+function F1load() {
+     document.getElementById("A6a").href = localStorage.getItem("A6link");
+     document.getElementById("A6a").title = localStorage.getItem("A6name");
+     document.getElementsByClassName("rF")[0].innerHTML = localStorage.getItem("A6name");
+     document.getElementById("A6img").src = localStorage.getItem("A6photo");
+     document.getElementById("A6imgic").src = localStorage.getItem("A6photo");
+}
+
+
+
+function F2script() {
+     var A7name = document.getElementById("name").value
+     var A7photo = document.getElementById("photo").value
+     var A7link = document.getElementById("link").value
+     localStorage.setItem("A7name", A7name);
+     localStorage.setItem("A7photo", A7photo);
+     localStorage.setItem("A7link", A7link);
+     F2load();
+}
+function F2load() {
+     document.getElementById("A7a").href = localStorage.getItem("A7link");
+     document.getElementById("A7a").title = localStorage.getItem("A7name");
+     document.getElementsByClassName("rF")[1].innerHTML = localStorage.getItem("A7name");
+     document.getElementById("A7img").src = localStorage.getItem("A7photo");
+     document.getElementById("A7imgic").src = localStorage.getItem("A7photo");
+}
+
+
+
+function F3script() {
+     var B6name = document.getElementById("name").value
+     var B6photo = document.getElementById("photo").value
+     var B6link = document.getElementById("link").value
+     localStorage.setItem("B6name", B6name);
+     localStorage.setItem("B6photo", B6photo);
+     localStorage.setItem("B6link", B6link);
+     F3load();
+}
+function F3load() {
+     document.getElementById("B6a").href = localStorage.getItem("B6link");
+     document.getElementById("B6a").title = localStorage.getItem("B6name");
+     document.getElementsByClassName("rF")[2].innerHTML = localStorage.getItem("B6name");
+     document.getElementById("B6img").src = localStorage.getItem("B6photo");
+     document.getElementById("B6imgic").src = localStorage.getItem("B6photo");
+}
+
+
+
+function F4script() {
+     var B7name = document.getElementById("name").value
+     var B7photo = document.getElementById("photo").value
+     var B7link = document.getElementById("link").value
+     localStorage.setItem("B7name", B7name);
+     localStorage.setItem("B7photo", B7photo);
+     localStorage.setItem("B7link", B7link);
+     F4load();
+}
+function F4load() {
+     document.getElementById("B7a").href = localStorage.getItem("B7link");
+     document.getElementById("B7a").title = localStorage.getItem("B7name");
+     document.getElementsByClassName("rF")[3].innerHTML = localStorage.getItem("B7name");
+     document.getElementById("B7img").src = localStorage.getItem("B7photo");
+     document.getElementById("B7imgic").src = localStorage.getItem("B7photo");
+}
+
+
+
+function F5script() {
+     var C6name = document.getElementById("name").value
+     var C6photo = document.getElementById("photo").value
+     var C6link = document.getElementById("link").value
+     localStorage.setItem("C6name", C6name);
+     localStorage.setItem("C6photo", C6photo);
+     localStorage.setItem("C6link", C6link);
+     F5load();
+}
+function F5load() {
+     document.getElementById("C6a").href = localStorage.getItem("C6link");
+     document.getElementById("C6a").title = localStorage.getItem("C6name");
+     document.getElementsByClassName("rF")[4].innerHTML = localStorage.getItem("C6name");
+     document.getElementById("C6img").src = localStorage.getItem("C6photo");
+     document.getElementById("C6imgic").src = localStorage.getItem("C6photo");
+}
+
+
+
+function A1script() {
+     var A1name = document.getElementById("name").value
+     var A1photo = document.getElementById("photo").value
+     var A1link = document.getElementById("link").value
+     localStorage.setItem("A1name", A1name);
+     localStorage.setItem("A1photo", A1photo);
+     localStorage.setItem("A1link", A1link);
+     A1load();
+}
+function A1load() {
+     document.getElementById("A1a").href = localStorage.getItem("A1link");
+     document.getElementById("A1a").title = localStorage.getItem("A1name");
+     document.getElementsByClassName("rA")[0].innerHTML = localStorage.getItem("A1name");
+     document.getElementById("A1img").src = localStorage.getItem("A1photo");
+     document.getElementById("A1imgic").src = localStorage.getItem("A1photo");
+}
+
+
+function A2script() {
+     var A2name = document.getElementById("name").value
+     var A2photo = document.getElementById("photo").value
+     var A2link = document.getElementById("link").value
+     localStorage.setItem("A2name", A2name);
+     localStorage.setItem("A2photo", A2photo);
+     localStorage.setItem("A2link", A2link);
+     A2load();
+}
+function A2load() {
+     document.getElementById("A2a").href = localStorage.getItem("A2link");
+     document.getElementById("A2a").title = localStorage.getItem("A2name");
+     document.getElementsByClassName("rA")[1].innerHTML = localStorage.getItem("A2name"); 
+     document.getElementById("A2img").src = localStorage.getItem("A2photo");
+     document.getElementById("A2imgic").src = localStorage.getItem("A2photo");
+}
+
+
+function A3script() {
+     var A3name = document.getElementById("name").value
+     var A3photo = document.getElementById("photo").value
+     var A3link = document.getElementById("link").value
+     localStorage.setItem("A3name", A3name);
+     localStorage.setItem("A3photo", A3photo);
+     localStorage.setItem("A3link", A3link);
+     A3load();
+}
+function A3load() {
+     document.getElementById("A3a").href = localStorage.getItem("A3link");
+     document.getElementById("A3a").title = localStorage.getItem("A3name");
+     document.getElementsByClassName("rA")[2].innerHTML = localStorage.getItem("A3name"); 
+     document.getElementById("A3img").src = localStorage.getItem("A3photo");
+     document.getElementById("A3imgic").src = localStorage.getItem("A3photo");
+}
+
+
+function A4script() {
+     var A4name = document.getElementById("name").value
+     var A4photo = document.getElementById("photo").value
+     var A4link = document.getElementById("link").value
+     localStorage.setItem("A4name", A4name);
+     localStorage.setItem("A4photo", A4photo);
+     localStorage.setItem("A4link", A4link);
+     A4load();
+}
+function A4load() {
+     document.getElementById("A4a").href = localStorage.getItem("A4link");
+     document.getElementById("A4a").title = localStorage.getItem("A4name");
+     document.getElementsByClassName("rA")[3].innerHTML = localStorage.getItem("A4name");
+     document.getElementById("A4img").src = localStorage.getItem("A4photo");
+     document.getElementById("A4imgic").src = localStorage.getItem("A4photo");
+}
+
+
+
+function A5script() {
+     var A5name = document.getElementById("name").value
+     var A5photo = document.getElementById("photo").value
+     var A5link = document.getElementById("link").value
+     localStorage.setItem("A5name", A5name);
+     localStorage.setItem("A5photo", A5photo);
+     localStorage.setItem("A5link", A5link);
+     A5load();
+}
+function A5load() {
+     document.getElementById("A5a").href = localStorage.getItem("A5link");
+     document.getElementById("A5a").title = localStorage.getItem("A5name");
+     document.getElementsByClassName("rA")[4].innerHTML = localStorage.getItem("A5name");
+     document.getElementById("A5img").src = localStorage.getItem("A5photo");
+     document.getElementById("A5imgic").src = localStorage.getItem("A5photo");
+}
+
+
+
+function B1script() {
+     var B1name = document.getElementById("name").value
+     var B1photo = document.getElementById("photo").value
+     var B1link = document.getElementById("link").value
+     localStorage.setItem("B1name", B1name);
+     localStorage.setItem("B1photo", B1photo);
+     localStorage.setItem("B1link", B1link);
+     B1load();
+}
+function B1load() {
+     document.getElementById("B1a").href = localStorage.getItem("B1link");
+     document.getElementById("B1a").title = localStorage.getItem("B1name");
+     document.getElementsByClassName("rB")[0].innerHTML = localStorage.getItem("B1name");
+     document.getElementById("B1img").src = localStorage.getItem("B1photo");
+     document.getElementById("B1imgic").src = localStorage.getItem("B1photo");
+}
+
+
+function B2script() {
+     var B2name = document.getElementById("name").value
+     var B2photo = document.getElementById("photo").value
+     var B2link = document.getElementById("link").value
+     localStorage.setItem("B2name", B2name);
+     localStorage.setItem("B2photo", B2photo);
+     localStorage.setItem("B2link", B2link);
+     B2load();
+}
+function B2load() {
+     document.getElementById("B2a").href = localStorage.getItem("B2link");
+     document.getElementById("B2a").title = localStorage.getItem("B2name");
+     document.getElementsByClassName("rB")[1].innerHTML = localStorage.getItem("B2name");
+     document.getElementById("B2img").src = localStorage.getItem("B2photo");
+     document.getElementById("B2imgic").src = localStorage.getItem("B2photo");
+}
+
+
+function B3script() {
+     var B3name = document.getElementById("name").value
+     var B3photo = document.getElementById("photo").value
+     var B3link = document.getElementById("link").value
+     localStorage.setItem("B3name", B3name);
+     localStorage.setItem("B3photo", B3photo);
+     localStorage.setItem("B3link", B3link);
+     B3load();
+}
+function B3load() {
+     document.getElementById("B3a").href = localStorage.getItem("B3link");
+     document.getElementById("B3a").title = localStorage.getItem("B3name");
+     document.getElementsByClassName("rB")[2].innerHTML = localStorage.getItem("B3name");
+     document.getElementById("B3img").src = localStorage.getItem("B3photo");
+     document.getElementById("B3imgic").src = localStorage.getItem("B3photo");
+}
+
+
+function B4script() {
+     var B4name = document.getElementById("name").value
+     var B4photo = document.getElementById("photo").value
+     var B4link = document.getElementById("link").value
+     localStorage.setItem("B4name", B4name);
+     localStorage.setItem("B4photo", B4photo);
+     localStorage.setItem("B4link", B4link);
+     B4load();
+}
+function B4load() {
+     document.getElementById("B4a").href = localStorage.getItem("B4link");
+     document.getElementById("B4a").title = localStorage.getItem("B4name");
+     document.getElementsByClassName("rB")[3].innerHTML = localStorage.getItem("B4name");
+     document.getElementById("B4img").src = localStorage.getItem("B4photo");
+     document.getElementById("B4imgic").src = localStorage.getItem("B4photo");
+}
+
+
+
+function B5script() {
+     var B5name = document.getElementById("name").value
+     var B5photo = document.getElementById("photo").value
+     var B5link = document.getElementById("link").value
+     localStorage.setItem("B5name", B5name);
+     localStorage.setItem("B5photo", B5photo);
+     localStorage.setItem("B5link", B5link);
+     B5load();
+}
+function B5load() {
+     document.getElementById("B5a").href = localStorage.getItem("B5link");
+     document.getElementById("B5a").title = localStorage.getItem("B5name");
+     document.getElementsByClassName("rB")[4].innerHTML = localStorage.getItem("B5name");
+     document.getElementById("B5img").src = localStorage.getItem("B5photo");
+     document.getElementById("B5imgic").src = localStorage.getItem("B5photo");
+}
+
+
+
+function C1script() {
+     var C1name = document.getElementById("name").value
+     var C1photo = document.getElementById("photo").value
+     var C1link = document.getElementById("link").value
+     localStorage.setItem("C1name", C1name);
+     localStorage.setItem("C1photo", C1photo);
+     localStorage.setItem("C1link", C1link);
+     C1load();
+}
+function C1load() {
+     document.getElementById("C1a").href = localStorage.getItem("C1link");
+     document.getElementById("C1a").title = localStorage.getItem("C1name");
+     document.getElementsByClassName("rC")[0].innerHTML = localStorage.getItem("C1name");
+     document.getElementById("C1img").src = localStorage.getItem("C1photo");
+     document.getElementById("C1imgic").src = localStorage.getItem("C1photo");
+}
+
+
+function C2script() {
+     var C2name = document.getElementById("name").value
+     var C2photo = document.getElementById("photo").value
+     var C2link = document.getElementById("link").value
+     localStorage.setItem("C2name", C2name);
+     localStorage.setItem("C2photo", C2photo);
+     localStorage.setItem("C2link", C2link);
+     C2load();
+}
+function C2load() {
+     document.getElementById("C2a").href = localStorage.getItem("C2link");
+     document.getElementById("C2a").title = localStorage.getItem("C2name");
+     document.getElementsByClassName("rC")[1].innerHTML = localStorage.getItem("C2name");
+     document.getElementById("C2img").src = localStorage.getItem("C2photo");
+     document.getElementById("C2imgic").src = localStorage.getItem("C2photo");
+}
+
+
+function C3script() {
+     var C3name = document.getElementById("name").value
+     var C3photo = document.getElementById("photo").value
+     var C3link = document.getElementById("link").value
+     localStorage.setItem("C3name", C3name);
+     localStorage.setItem("C3photo", C3photo);
+     localStorage.setItem("C3link", C3link);
+     C3load();
+}
+function C3load() {
+     document.getElementById("C3a").href = localStorage.getItem("C3link");
+     document.getElementById("C3a").title = localStorage.getItem("C3name");
+     document.getElementsByClassName("rC")[2].innerHTML = localStorage.getItem("C3name");
+     document.getElementById("C3img").src = localStorage.getItem("C3photo");
+     document.getElementById("C3imgic").src = localStorage.getItem("C3photo");
+}
+
+
+function C4script() {
+     var C4name = document.getElementById("name").value
+     var C4photo = document.getElementById("photo").value
+     var C4link = document.getElementById("link").value
+     localStorage.setItem("C4name", C4name);
+     localStorage.setItem("C4photo", C4photo);
+     localStorage.setItem("C4link", C4link);
+     C4load();
+}
+function C4load() {
+     document.getElementById("C4a").href = localStorage.getItem("C4link");
+     document.getElementById("C4a").title = localStorage.getItem("C4name");
+     document.getElementsByClassName("rC")[3].innerHTML = localStorage.getItem("C4name");
+     document.getElementById("C4img").src = localStorage.getItem("C4photo");
+     document.getElementById("C4imgic").src = localStorage.getItem("C4photo");
+}
+
+
+
+function C5script() {
+     var C5name = document.getElementById("name").value
+     var C5photo = document.getElementById("photo").value
+     var C5link = document.getElementById("link").value
+     localStorage.setItem("C5name", C5name);
+     localStorage.setItem("C5photo", C5photo);
+     localStorage.setItem("C5link", C5link);
+     C5load();
+}
+function C5load() {
+     document.getElementById("C5a").href = localStorage.getItem("C5link");
+     document.getElementById("C5a").title = localStorage.getItem("C5name");
+     document.getElementsByClassName("rC")[4].innerHTML = localStorage.getItem("C5name");
+     document.getElementById("C5img").src = localStorage.getItem("C5photo");
+     document.getElementById("C5imgic").src = localStorage.getItem("C5photo");
+}
+</script>
+
+<style></style>
+
+<script>
+function Alert(Text, OK) {
+     document.getElementById("AlertText").innerHTML = Text;
+     document.getElementById("AlertOK").innerHTML = OK;
+     document.getElementById("Alert").style.display="block";
+}
+</script>
+<div id="Alert" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom w3-card-8">
+    <header class="w3-container">
+      <span onclick="document.getElementById('Alert').style.display='none'" class="w3-red w3-padding-1" id="appleClose">&times;</span>
+      <h2>Message from Hello Life</h2>
+    </header>
+    <div class="w3-container">
+    <br><br>
+      <p id="AlertText"></p>
+    <br><br>
+    </div>
+  <div class="w3-container w3-light-grey w3-padding">
+   <button class="w3-btn w3-right w3-white w3-border"
+   onclick="document.getElementById('Alert').style.display='none'" id="AlertOK">OK</button>
+  </div>
+  </div>
+</div>
+
+<script>
+function Confirm(Text, Cancel, OK) {
+     document.getElementById("ConfirmText").innerHTML = Text;
+     document.getElementById("ConfirmCancel").innerHTML = Cancel;
+     document.getElementById("ConfirmOK").innerHTML = OK;
+     document.getElementById("Confirm").style.display="block";
+}
+</script>
+<div id="Confirm" class="w3-modal">
+  <div class="w3-modal-content w3-animate-top w3-card-8">
+    <header class="w3-container w3-blue">
+      <span onclick="document.getElementById('Confirm').style.display='none'"
+      class="w3-closebtn">&times;</span>
+      <h2>Modal Header</h2>
+    </header>
+    <div class="w3-container">
+      <p id="ConfirmText"></p>
+    </div>
+  <div class="w3-container w3-light-grey w3-padding">
+   <button class="w3-btn w3-right w3-white w3-border"
+   onclick="var ConfirmInputValue = "true"; document.getElementById('Confirm').style.display='none'" id="ConfirmCancel">Cancel</button>
+   onclick="var ConfirmInputValue = "false"; document.getElementById('Confirm').style.display='none'" id="ConfirmOK">OK</button>
+  </div>
+  </div>
+</div>
+
+<script>
+function Prompt(Text, Input, OK) {
+     document.getElementById("PromptText").innerHTML = Text;
+     document.getElementById("PromptInput").innerHTML = Input;
+     document.getElementById("PromptOK").innerHTML = OK;
+     document.getElementById("Prompt").style.display="block";
+}
+</script>
+<div id="Prompt" class="w3-modal">
+  <div class="w3-modal-content w3-animate-top w3-card-8">
+    <header class="w3-container w3-blue">
+      <span onclick="document.getElementById('Prompt').style.display='none'"
+      class="w3-closebtn">&times;</span>
+      <h2>Modal Header</h2>
+    </header>
+    <div class="w3-container">
+      <p id="PromptText"></p>
+      <input class="w3-input" type="text" id="PromptInput" onkeyup="var PromptInputValue = document.getElementById('PromptInput').value"></p>
+    </div>
+  <div class="w3-container w3-light-grey w3-padding">
+   <button class="w3-btn w3-right w3-white w3-border"
+   onclick="document.getElementById('Prompt').style.display='none'" id="PromptOK">OK</button>
+  </div>
+  </div>
+</div>
+
+<div id="nameReset" class="w3-modal">
+  <div class="w3-modal-content w3-animate-top w3-card-8">
+    <header class="w3-container">
+      <span onclick="document.getElementById('nameReset').style.display='none'" class="w3-red w3-padding-1" id="appleClose">&times;</span>
+      <h2>Message from Hello Life</h2>
+    </header>
+    <div class="w3-container">
+      <h1>Do you want to change your name?</h1>
+    </div>
+  <div class="w3-container w3-light-grey w3-padding">
+   <button class="w3-btn w3-right w3-white w3-border" onclick="ChangeName(); WelcomeNewUser(); document.getElementById('nameReset').style.display='none'">OK</button>
+   <button class="w3-btn w3-right w3-white w3-border" onclick="Alert('OK then if you want to change your name just click on the name in the top right corner again', 'Got it'); document.getElementById('nameReset').style.display='none'">Cancel</button>
+  </div>
+  </div>
+</div>
+
+<script>
+function ChangeName() {
+     var UserNameV = prompt("What is your name?", localStorage.UserName);
+     if (UserNameV == null) {
+        UserNameV = localStorage.getItem("UserName")
+     }
+     localStorage.setItem('UserName', UserNameV);
+     
+}
+</script>
+
+<script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+}
+</script>
+<script src="script.js"></script>
+<script src="index.js"></script>
+</div>
+
+<!-- Ads -->
+<script type="text/javascript"> var infolinks_pid = 3072329; var infolinks_wsid = 0; </script> <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
+
+<!--script src="https://cdn.adless.io/adless.js"></script>
+<script>
+  var adless = new Adless.Anonymous('cb925aac6c271bfd51e60f36d5abb498');
+  adless.start();
+</script-->
+
+<!--script src="//defpush.com/ntfc.php?p=1559151" data-cfasync="false" async></script-->
+
+<!--meta name="propeller" content="10b351b48909967209dada9222cbe8e3"-->
+
+</body>
+</html>
