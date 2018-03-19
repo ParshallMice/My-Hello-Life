@@ -1,5 +1,7 @@
 var commonWebsites = [
+/* The following is an example showing you how to add a website to the array:
     ["EXAMPLE NAME", "http://url.of.the/image.png", "https://url.of.the/website_that_you_want_to_add"],
+Note: If you add a website make sure it fits in alphabetical order based on the name with all of the otehr sites.*/
     ["", "img/PlaceHolder.png", "#"],
     ["IMAHOTEL", "https://www.iconexperience.com/_img/g_collection_png/standard/512x512/hotel.png", "javascript:imahoteljoin()"],
     ["ADOBE", "http://www.mcvsd.org/tips/images/adobe-icon-512.png", "http://www.adobe.com"],
