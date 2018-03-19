@@ -1,4 +1,5 @@
 var commonWebsites = [
+    ["EXAMPLE NAME", "http://url.of.the/image.png", "https://url.of.the/website_that_you_want_to_add"],
     ["", "img/PlaceHolder.png", "#"],
     ["IMAHOTEL", "https://www.iconexperience.com/_img/g_collection_png/standard/512x512/hotel.png", "javascript:imahoteljoin()"],
     ["ADOBE", "http://www.mcvsd.org/tips/images/adobe-icon-512.png", "http://www.adobe.com"],
